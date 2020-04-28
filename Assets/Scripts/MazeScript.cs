@@ -3244,6 +3244,8 @@ public class MazeScript : MonoBehaviour
             activityFeed.text += "Enemy team's bank gave them 30 gold\n";
         }
 
+        activityFeed.GetComponent<RectTransform>().anchoredPosition = new Vector2(0, activityFeed.GetComponent<RectTransform>().anchoredPosition.y);
+
         prevx = -1;
         prevy = -1;
         yield return PlayerTurn();
